@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '01';
+  name = 'Alexej';
+  imgURL = 'https://angular.io/assets/images/logos/angular/angular.png';
+
+  getName(){
+    return this.name;
+  }
+  changeImagr(e: KeyboardEvent){
+    this.imgURL = (e.target as HTMLInputElement).value;
+  }
 }
