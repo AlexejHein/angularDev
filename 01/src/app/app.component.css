@@ -2,3 +2,23 @@ input{
     display: block;
     margin: 10px 0;
 }
+hr{
+    margin: 20px 0;
+}
+
+.blue{
+    background-color:  blue;
+    color: white;
+    margin: 10px 0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.black{
+    background-color:  black;
+    color: white;
+    margin: 10px 0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
