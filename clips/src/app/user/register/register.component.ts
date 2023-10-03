@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import IUser from '../../models/user.model';
+import { RegisterValidators } from '../validators/register-validators';
+import { EmailTaken } from '../validators/email-taken';
 
 
 @Component({
@@ -12,7 +14,10 @@ import IUser from '../../models/user.model';
 
 export class RegisterComponent {
 
-  constructor(private auth: AuthService){}
+  constructor(
+    private auth: AuthService,
+    private emailTaken: EmailTaken
+    ){}
 
   inSubmission = false;
 
@@ -21,7 +26,7 @@ export class RegisterComponent {
     Validators.minLength(4),]);
   email =  new FormControl('',[
     Validators.required,
-    Validators.email,]);
+    Validators.email,], [this.emailTaken.validate]);
   age =  new FormControl<number | null>(null,[
     Validators.required,
     Validators.min(18),
@@ -51,7 +56,7 @@ export class RegisterComponent {
     password: this.password,
     confirm_Password: this.confirm_Password,
     phoneNumber: this.phoneNumber
-  });
+  }, [RegisterValidators.match('password', 'confirm_Password')]);
 
   async register(){
     this.showAlert = true;
