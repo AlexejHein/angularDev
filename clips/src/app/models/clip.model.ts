@@ -1,6 +1,7 @@
 import firebase from 'firebase/compat/app';
 export default interface IClip {
-  uid: string;
+    docID?: string;
+    uid: string;
     displayName: string;
     title: string;
     fileName: string;
