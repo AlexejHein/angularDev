@@ -30,7 +30,7 @@
           hover:bg-indigo-400 hover:border-indigo-400 hover:border-solid text-xl">
           <h5>Drop your file here (mp4 only!)</h5>
           <span *ngIf="ffmpegService.isRunning" class="material.icons text-center text-6xl p-8 animate-spin">
-            autorenew
+            settings
           </span>
         </div>
         <input type="file" (change)="storeFile($event)">
