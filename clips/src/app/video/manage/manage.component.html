@@ -7,7 +7,7 @@
 
     <!-- Sort Videos -->
     <select (change)="sort($event)"
-      class="text-black px-8 text-xl outline-none appearance-none">
+            class="text-black px-8 text-xl outline-none appearance-none">
       <option value="1" [selected]="videoOrder === '1'">Recent Uploads</option>
       <option value="2" [selected]="videoOrder === '2'">Oldest Uploads</option>
     </select>
@@ -23,17 +23,20 @@
 
       <!-- Image -->
       <a href="#">
-        <img class="card-img-top rounded-tl-2xl w-full" src="assets/img/1.jpg">
+        <img class="card-img-top rounded-tl-2xl w-full"
+             [src]="clip.screenshotURL" crossorigin>
       </a>
 
       <!-- Body -->
       <div class="p-6 text-2xl">
 
         <!-- Link -->
-        <a href="#" class="font-bold mb-2">
+        <a [routerLink]="['/', 'clip', clip.docID]"
+           class="font-bold mb-2">
           {{ clip.title }}
         </a>
-        <a href="#" class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded">
+        <a (click)="copyToClipboard($event, clip.docID)"
+           href="#" class="bg-gray-400 text-white px-2 py-1 ml-2 text-sm rounded">
           Copy Link
         </a>
 
@@ -51,9 +54,8 @@
       </div>
 
     </div>
-
-
   </div>
 </div>
 
-<app-edit [activeClip]="activeClip" (update)="update($event)"></app-edit>
+<app-edit [activeClip]="activeClip"
+          (update)="update($event)"></app-edit>

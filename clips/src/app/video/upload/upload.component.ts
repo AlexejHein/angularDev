@@ -54,7 +54,7 @@ export class UploadComponent implements OnDestroy{
     public ffmpegService: FfmpegService
   ){
     auth.user.subscribe(user => this.user = user);
-    this.ffmpegService.init();
+    this.ffmpegService.init().then(r => console.log(r));
   }
 
   ngOnDestroy(){
