@@ -1,1 +1,31 @@
-
+<mat-toolbar class="header-menu">
+  <img src="assets/img/logo-WooBoo.png" alt="logo" class="logo">
+  <span class="example-spacer"></span>
+  <div class="menu-header">
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+      My Account
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Login</button>
+      <button mat-menu-item>Signup</button>
+    </mat-menu>
+  </div>
+  <mat-card class="shop-card">
+    <mat-icon>shopping_cart</mat-icon>
+    0
+  </mat-card>
+  </div>
+</mat-toolbar>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="menu">
+      <button mat-button [routerLink]="['/home']">Home</button>
+      <button mat-button [routerLink]="['/shop']">Shop</button>
+      <img src="assets/img/logo-WooBoo.png" alt="logo" class="logo">
+      <button mat-button [routerLink]="['/blog']">Blog</button>
+      <button mat-button [routerLink]="['/contact']">Contact</button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
