@@ -17,6 +17,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
+import { NewproductsComponent } from './newproducts/newproducts.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     ShopComponent,
     BlogComponent,
     ContactComponent,
-    CarouselComponent
+    CarouselComponent,
+    NewproductsComponent
   ],
   imports: [
     BrowserModule,
