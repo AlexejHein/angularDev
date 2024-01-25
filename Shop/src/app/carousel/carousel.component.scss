@@ -21,7 +21,6 @@
     .col-1{
       width: 100%;
       height: 280px;
-      background-color: #bb9494;
       margin-bottom: 20px;
     }
   }
@@ -34,6 +33,16 @@
       height: 300px;
     }
   }
+}
+.img-1{
+  background-image: url(/assets/img/taschen-img.png);
+  background-size: cover;
+  color: #bb9494;
+}
+.img-2{
+  background-image: url(/assets/img/schmuck-img.png);
+  background-size: cover;
+  color: #bb9494;
 }
 .blue{
   background-color: #b29ce3;
