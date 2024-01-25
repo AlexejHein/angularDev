@@ -5,11 +5,11 @@
   <div>
     <button mat-button [matMenuTriggerFor]="menu">
       <mat-icon>person</mat-icon>
-      My Account
+      <span class="fonts">My Account</span>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Login</button>
-      <button mat-menu-item>Signup</button>
+      <button class="fonts" mat-menu-item>Login</button>
+      <button class="fonts" mat-menu-item>Signup</button>
     </mat-menu>
   </div>
   <mat-card class="shop-card">
@@ -21,11 +21,11 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <div class="menu">
-      <button mat-button [routerLink]="['/home']">Home</button>
-      <button mat-button [routerLink]="['/shop']">Shop</button>
+      <button class="fonts" mat-button [routerLink]="['/home']">Home</button>
+      <button class="fonts" mat-button [routerLink]="['/shop']">Shop</button>
       <img src="assets/img/logo-WooBoo.png" alt="logo" class="logo">
-      <button mat-button [routerLink]="['/blog']">Blog</button>
-      <button mat-button [routerLink]="['/contact']">Contact</button>
+      <button class="fonts" mat-button [routerLink]="['/blog']">Blog</button>
+      <button class="fonts" mat-button [routerLink]="['/contact']">Contact</button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
