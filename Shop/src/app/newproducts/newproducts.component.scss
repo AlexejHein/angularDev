@@ -5,4 +5,24 @@
     font-weight: 400;
     margin-bottom: 20px;
   }
+
+  .product-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .example-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+      height: 500px;
+      margin: 10px;
+    }
+    button {
+      background-color: #bb9494;
+      color: #ffffff;
+      margin-top: 20px;
+    }
+  }
 }

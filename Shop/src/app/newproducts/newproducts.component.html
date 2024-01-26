@@ -5,6 +5,7 @@
     tempor invidunt ut labore et dolore <br> magna aliquyam erat, sed diam voluptua.
     At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,</p>
 
+  <div class="product-content">
   <div *ngFor="let product of products">
   <mat-card class="example-card">
     <mat-card-header>
@@ -14,10 +15,16 @@
         <img mat-card-xl-image [src]="product.image" >
       </mat-card-title-group>
     </mat-card-header>
+    <hr>
     <mat-card-content>
       {{ product.description }}
+      <br>
+      <hr>
+      {{ product.price }} €
+      <button mat-raised-button (click)="addToCart(product)">Add to Cart</button>
     </mat-card-content>
   </mat-card>
+  </div>
   </div>
 
 </div>

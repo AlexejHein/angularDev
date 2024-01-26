@@ -17,4 +17,7 @@ export class NewproductsComponent {
       console.log(this.products);
     }
 
+  addToCart(product: any) {
+
+  }
 }
