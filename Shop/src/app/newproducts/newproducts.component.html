@@ -5,4 +5,19 @@
     tempor invidunt ut labore et dolore <br> magna aliquyam erat, sed diam voluptua.
     At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,</p>
 
+  <div *ngFor="let product of products">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
+        <img mat-card-xl-image [src]="product.image" >
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      {{ product.description }}
+    </mat-card-content>
+  </mat-card>
+  </div>
+
 </div>
