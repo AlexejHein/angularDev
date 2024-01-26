@@ -18,6 +18,11 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NewproductsComponent } from './newproducts/newproducts.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -43,6 +48,11 @@ import { NewproductsComponent } from './newproducts/newproducts.component';
     MatInputModule,
     MatMenuModule,
     HttpClientModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"shop-53e98","appId":"1:1019670514009:web:72b1835363f74c0b232448","storageBucket":"shop-53e98.appspot.com","apiKey":"AIzaSyBgrVnYfox_WrqMQpezUwhI9mhT5XVYlaw","authDomain":"shop-53e98.firebaseapp.com","messagingSenderId":"1019670514009"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage()),
   ],
   providers: [],
   bootstrap: [AppComponent]
