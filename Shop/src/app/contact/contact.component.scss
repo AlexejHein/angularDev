@@ -1,0 +1,22 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p{
+    width: 50%;
+  }
+  .formField {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    mat-form-field {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+}

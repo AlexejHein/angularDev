@@ -23,6 +23,7 @@ import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getStorage, provideStorage } from '@angular/fire/storage';
+import {MatSelectModule} from "@angular/material/select";
 
 
 @NgModule({
@@ -37,23 +38,31 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     CarouselComponent,
     NewproductsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatCardModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatMenuModule,
-    HttpClientModule,
-    provideFirebaseApp(() => initializeApp({"projectId":"shop-53e98","appId":"1:1019670514009:web:72b1835363f74c0b232448","storageBucket":"shop-53e98.appspot.com","apiKey":"AIzaSyBgrVnYfox_WrqMQpezUwhI9mhT5XVYlaw","authDomain":"shop-53e98.firebaseapp.com","messagingSenderId":"1019670514009"})),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore()),
-    provideDatabase(() => getDatabase()),
-    provideStorage(() => getStorage()),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MatCardModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatInputModule,
+        MatMenuModule,
+        HttpClientModule,
+        provideFirebaseApp(() => initializeApp({
+            "projectId": "shop-53e98",
+            "appId": "1:1019670514009:web:72b1835363f74c0b232448",
+            "storageBucket": "shop-53e98.appspot.com",
+            "apiKey": "AIzaSyBgrVnYfox_WrqMQpezUwhI9mhT5XVYlaw",
+            "authDomain": "shop-53e98.firebaseapp.com",
+            "messagingSenderId": "1019670514009"
+        })),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+        provideDatabase(() => getDatabase()),
+        provideStorage(() => getStorage()),
+        MatSelectModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

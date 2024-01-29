@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
 
+
+  sendMessage(){
+    alert('Your message has been sent');
+  }
 }
